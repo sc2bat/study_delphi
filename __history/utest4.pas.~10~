@@ -56,18 +56,8 @@ begin
 end;
 
 function Add(x, y : integer):integer;
-function Divide(x, y : integer):integer;
-
-
 begin
-//  Add := x + y;
-  Result := x + y;
-// exit(x + y);
-end;
-
-function Divide(x, y : integer):integer;
-begin
-  Result := x div y;
+  Add := x + y;
 end;
 
 // uses 절을 만나면 실행 : 초기처리 : 변수 default 값 지정, 메모리 할당
