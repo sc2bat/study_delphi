@@ -1,0 +1,37 @@
+unit utest4;
+
+// 순서 interface implementation initialization finalization
+// type, const, var, procedure, function 선언
+// 다른 유니트에서 이곳에 정의된 var, procedure, function 사용 가능 단 uses 절에 utest4 추가해야함
+// 인터페이스 타입
+interface
+type
+  Country = array [0..2] of string; // 여러개의 자료형은 불가
+
+// 변수 선언
+var
+  s : string; // unicodString;
+{ 버전에 따라 다름
+1.0 : shortstring
+2.0 ~ 2009 이전 : Ansistring
+2009 ~ 현재 : UNICODESTRING
+}
+  i : integer = 100; // 숫자형
+  t : tdatetime;
+  b : boolean;
+  Countries : Country;
+
+implementation
+
+// uses 절을 만나면 실행 : 초기처리 : 변수 default 값 지정, 메모리 할당
+initialization
+begin
+  Countries[0] := '한국';
+  Countries[1] := '미국';
+  Countries[2] := '영국';
+
+end;
+
+finalization
+
+end.

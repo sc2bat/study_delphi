@@ -1,0 +1,15 @@
+unit utest4;
+
+// 순서 interface implementation initialization finalization
+// type, const, var, procedure, function 선언
+// 다른 유니트에서 이곳에 정의된 var, procedure, function 사용 가능 단 uses 절에 utest4 추가해야함
+interface
+
+
+implementation
+
+initialization
+
+finalization
+
+end.
